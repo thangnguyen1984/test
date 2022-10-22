@@ -72,11 +72,9 @@ class ImportDataCommand extends Command
             if((strlen($item->title) > 2 && strlen($item->title) < 13) && ($item->price>0 && $item->price <= 200)){
                 $checkProductObj = $emProduct->findOneBy(['title' => $item->title]);
                 if($checkProductObj){
-                    //echo 7;
                     $io->writeln("Category {{$item->title}} have been already existed");
                 }
                 else{
-                    //echo 8;
                     $product = new Product();
                     $product->setTitle($item->title);
                     $product->setPrice($item->price);
