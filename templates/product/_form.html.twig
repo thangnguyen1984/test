@@ -1,0 +1,30 @@
+
+{{ form_start(form) }}
+    <div class="form-error" style="color:red">
+            {{ form_errors(form.price) }}
+    </div>
+
+    <div>
+        <div class="col">
+            {{ form_label(form.title, 'Title') }} *
+            {{ form_widget(form.title, { 'attr': {'class': 'form-control'}}) }}
+            <div class="clearfix"></div>
+        </div>
+        <div class="col" id="some-custom-id">
+            {{ form_label(form.price, 'Price') }} *
+            {{ form_widget(form.price, { 'attr': {'class': 'form-control'}}) }}
+            <div class="clearfix"></div>
+        </div>
+        <div class="col" id="some-custom-id">
+            {{ form_label(form.eId, 'eId') }}
+            {{ form_widget(form.eId, { 'attr': {'class': 'form-control'}}) }}
+            <div class="clearfix"></div>
+        </div>
+        <div class="col" id="some-custom-id">
+            {{ form_label(form.categories, 'Categories') }}
+            {{ form_widget(form.categories, { 'attr': {'class': 'form-control'}}) }}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <button class="btn btn-primary" style="margin-left: 20px;margin-top:20px">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
