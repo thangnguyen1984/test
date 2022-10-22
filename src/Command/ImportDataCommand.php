@@ -43,7 +43,7 @@ class ImportDataCommand extends Command
         $io = new SymfonyStyle($input, $output);
         $arg1 = $input->getArgument('arg1');
         $emCategory = $this->entityManager->getRepository(Category::class);
-        $contentCategory = file_get_contents("category.json");
+        $contentCategory = file_get_contents("categories.json");
         $data = json_decode($contentCategory);
         foreach($data as $key=>$item){
             //Min title text is 3 and max title text is 12
@@ -65,7 +65,7 @@ class ImportDataCommand extends Command
         }
 
         $emProduct = $this->entityManager->getRepository(Product::class);
-        $contentProduct = file_get_contents("product.json");
+        $contentProduct = file_get_contents("products.json");
         $dataProduct = json_decode($contentProduct);
         foreach($dataProduct as $key=>$item){
             //Min title text is 3 and max title text is 12, min Price is 0 and max Price is 200
