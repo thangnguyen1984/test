@@ -1,4 +1,8 @@
 - Create your database first with utf8mb4_unicode_ci Collation and run test.sql 
+
+- Run command to update all libraries : 
+    composer update
+
 - update .env : DATABASE_URL="mysql://root:@127.0.0.1:3306/test?serverVersion=8&charset=utf8mb4" to your database info
 
 - Update email info in .env : MAILER_DSN=gmail://luckyshy@gmail.com:elzwrsyxsupmywol@default
